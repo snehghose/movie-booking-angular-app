@@ -23,14 +23,10 @@ export class TicketComponent implements OnInit {
       const bookingId = params['id'];
       this.bookingService.getBookingById(bookingId).subscribe(data => {
         this.booking = data;
-        console.log(this.booking);
         
         this.showService.getShowById(this.booking.showId).subscribe(show => {
           this.show = show
-          console.log(show);
-          
         });
-        console.log(this.show);
         
         for (var i=0;i<this.booking.noOfSeats;i++)
         this.seats += " A"+(this.booking.seat+i)+",";

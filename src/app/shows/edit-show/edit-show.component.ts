@@ -37,7 +37,6 @@ export class EditShowComponent implements OnInit {
         if (this.show) {
           this.movieService.getMovieById(this.show.movieId).subscribe(movie => this.movie = movie);
           this.theatreService.getTheatreById(this.show.theatreId).subscribe(theatre => this.theatre = theatre);
-          console.log(this.show.date);
           
           this.editShow.patchValue({
             date: this.show.date,

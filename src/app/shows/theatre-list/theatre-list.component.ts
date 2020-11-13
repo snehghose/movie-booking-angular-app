@@ -19,8 +19,6 @@ export class TheatreListComponent implements OnInit {
   constructor( private route: ActivatedRoute, private showService: ShowService ) { }
 
   ngOnInit(): void {
-    console.log(new Date());
-    
     var today = new Date();
     this.day0 = new Date();
     this.day1 = new Date(today.setDate(today.getDate() + 1));

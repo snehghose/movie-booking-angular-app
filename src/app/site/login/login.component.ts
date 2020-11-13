@@ -48,7 +48,6 @@ export class LoginComponent implements OnInit {
         this.authService.setToken(res['token'])
       }, (res: HttpErrorResponse) => {
         const statusCode = res.status;
-        console.log(statusCode);
         if (statusCode === 401) {
           this.loginFailed = true;
         } else if (statusCode === 403) {

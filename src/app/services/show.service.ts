@@ -26,7 +26,6 @@ export class ShowService {
   }
 
   getShowsByMovieIdAndDate(movieId: string, date: Date): Observable<Show[]> {
-    console.log(`${this._baseUrl}/${movieId}/${date.toJSON().split('T')[0]}`)
     return this.http.get<Show[]>(`${this._baseUrl}/${movieId}/${date.toJSON().split('T')[0]}`);
   }
 

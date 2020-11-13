@@ -66,7 +66,6 @@ export class AddShowComponent implements OnInit {
         startTime: this.startTime.value,
         ticketPrice: this.ticketPrice.value
       }
-      console.log(newShow);
       
       this.showService.addShow(newShow).subscribe((data) => {
       if(data)
