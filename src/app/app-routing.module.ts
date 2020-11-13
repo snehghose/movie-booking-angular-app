@@ -73,8 +73,7 @@ const routes: Routes = [
   },
   {
     path: 'shows/:id',
-    component: TheatreListComponent,
-    canActivate: [AuthGuardService]
+    component: TheatreListComponent
   },
   {
     path: 'show/add',
