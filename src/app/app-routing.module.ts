@@ -32,7 +32,8 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    component: AdminDashboardComponent
+    component: AdminDashboardComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'login',
@@ -48,11 +49,13 @@ const routes: Routes = [
   },
   {
     path: 'movie/add',
-    component: AddMovieComponent
+    component: AddMovieComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'movie/:id/edit',
-    component: EditMovieComponent
+    component: EditMovieComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'movies',
@@ -60,23 +63,28 @@ const routes: Routes = [
   },
   {
     path: 'theatre/add',
-    component: AddTheatreComponent
+    component: AddTheatreComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'theatre/:id/edit',
-    component: EditTheatreComponent
+    component: EditTheatreComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'shows/:id',
-    component: TheatreListComponent
+    component: TheatreListComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'show/add',
-    component: AddShowComponent
+    component: AddShowComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'show/:id/edit',
-    component: EditShowComponent
+    component: EditShowComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'booking/:id',
@@ -84,11 +92,13 @@ const routes: Routes = [
   },
   {
     path: 'ticket/:id',
-    component: TicketComponent
+    component: TicketComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'booking-history',
-    component: BookingHistoryComponent
+    component: BookingHistoryComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'change-password',
